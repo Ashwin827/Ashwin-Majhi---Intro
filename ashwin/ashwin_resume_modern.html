@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ashwin Majhi | IT Support Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Online resume of Ashwin Majhi - IT Support, Technical Support and Customer Service professional based in Australia."
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0f172a;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.3);
+      --radius-lg: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    nav a {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: border 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 24px;
+      margin-bottom: 32px;
+      align-items: center;
+    }
+
+    .hero-main h1 {
+      font-size: clamp(2.2rem, 3.1vw, 2.8rem);
+      margin-bottom: 4px;
+    }
+
+    .hero-main h1 span {
+      color: var(--accent);
+    }
+
+    .hero-title-sub {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 18px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .tag-pill {
+      font-size: 0.75rem;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(12px);
+      color: var(--text-muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s ease, border 0.2s ease, transform 0.1s ease, color 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      border-color: transparent;
+      color: #0b1120;
+      font-weight: 600;
+      box-shadow: 0 14px 35px rgba(8, 47, 73, 0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 40px rgba(8, 47, 73, 0.9);
+    }
+
+    .btn-ghost {
+      border-color: var(--border-subtle);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .hero-contact {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-contact a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #0f172a 0, #020617 45%, #000 100%);
+      border-radius: 22px;
+      padding: 20px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -120px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(56, 189, 248, 0.2), transparent 55%),
+        radial-gradient(circle at 80% 120%, rgba(34, 197, 94, 0.16), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .hero-card-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-card-role {
+      font-size: 0.88rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .hero-card-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.75rem;
+      margin-top: 4px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 2.2fr 1.5fr;
+      gap: 24px;
+    }
+
+    section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius-lg);
+      padding: 14px 16px;
+      border: 1px solid rgba(30, 64, 175, 0.5);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.8);
+    }
+
+    .card + .card {
+      margin-top: 9px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 0.96rem;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .card-subtitle {
+      font-size: 0.84rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .card-body {
+      font-size: 0.86rem;
+      color: var(--text-main);
+    }
+
+    .card-body ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    .card-body li {
+      margin-bottom: 3px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .list-compact {
+      font-size: 0.86rem;
+      color: var(--text-main);
+      padding-left: 16px;
+    }
+
+    .list-compact li {
+      margin-bottom: 3px;
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(31, 41, 55, 0.8);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wrapper {
+        padding-inline: 12px;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">AM • Resume</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-main">
+        <p class="hero-title-sub">IT Support • Technical Support • Customer Service</p>
+        <h1>Resume of <span>Ashwin Majhi</span></h1>
+        <p class="hero-subtitle">
+          Motivated IT support and customer service professional with hands-on experience
+          troubleshooting POS systems, printers, basic networking, and supporting users in
+          fast-paced environments. Strong communication skills, attention to detail, and the
+          ability to learn new technologies quickly. Open to relocate anywhere in Australia.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag-pill">IT Support</span>
+          <span class="tag-pill">Help Desk</span>
+          <span class="tag-pill">Technical Support</span>
+          <span class="tag-pill">Customer Service</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#experience" class="btn-primary">View Work Experience</a>
+          <a href="#skills" class="btn-ghost">See Technical Skills</a>
+        </div>
+
+        <p class="hero-contact" id="contact">
+          📍 Based in Australia • Open to relocate nationwide<br />
+          ✉️
+          <a href="mailto:Ashwinmajhi827@gmail.com">Ashwinmajhi827@gmail.com</a> • 📞
+          <a href="tel:+61406228933">0406 228 933</a><br />
+          🔗
+          <a href="https://linkedin.com/in/ashwin-majhi" target="_blank" rel="noreferrer">
+            linkedin.com/in/ashwin-majhi
+          </a>
+        </p>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-inner">
+          <p class="hero-card-title">Profile Snapshot</p>
+          <p class="hero-card-name">Ashwin Majhi</p>
+          <p class="hero-card-role">IT Support • Technical Support • Customer-Facing</p>
+
+          <div class="hero-card-row">
+            <div>
+              <strong>Focus</strong>
+              <p>IT Support, Help Desk, Customer Service</p>
+            </div>
+            <div>
+              <strong>Location</strong>
+              <p>Australia-wide (willing to relocate)</p>
+            </div>
+          </div>
+
+          <div class="hero-card-row">
+            <div>
+              <strong>Strengths</strong>
+              <p>Problem-solving, communication, reliability</p>
+            </div>
+            <div>
+              <strong>Background</strong>
+              <p>Retail, production & technical exposure</p>
+            </div>
+          </div>
+
+          <span class="pill">Full working rights • NSW Driver Licence • RSA • White Card</span>
+        </div>
+      </aside>
+    </section>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- Skills -->
+        <section id="skills">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="card">
+            <div class="two-col">
+              <div>
+                <p class="card-subtitle">Core IT & Support</p>
+                <ul class="list-compact">
+                  <li>Windows & macOS support</li>
+                  <li>Hardware & software troubleshooting & repair</li>
+                  <li>POS and printer support</li>
+                  <li>Basic network setup & configuration</li>
+                  <li>Connectivity and device diagnostics</li>
+                  <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                </ul>
+              </div>
+              <div>
+                <p class="card-subtitle">Web & Programming</p>
+                <ul class="list-compact">
+                  <li>HTML, CSS, basic JavaScript</li>
+                  <li>Python (foundational)</li>
+                  <li>Basic SQL / MySQL concepts</li>
+                  <li>Git & GitHub, VS Code, XAMPP/WAMP</li>
+                </ul>
+              </div>
+            </div>
+            <div class="chip-row" style="margin-top: 6px;">
+              <span class="chip">IT Support</span>
+              <span class="chip">Help Desk</span>
+              <span class="chip">Troubleshooting</span>
+              <span class="chip">Customer Service</span>
+              <span class="chip">Networking Basics</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+          <h2 class="section-title">Work Experience</h2>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="card-title">Customer Service Representative</p>
+                <p class="card-subtitle">Bourke Street Bakery • Sydney, Australia</p>
+              </div>
+              <div class="card-meta">2023 – 2025</div>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>Delivered friendly, professional service in a high-volume retail environment.</li>
+                <li>Assisted customers with orders, product information and issue resolution.</li>
+                <li>Operated POS systems, handled transactions and supported basic POS troubleshooting.</li>
+                <li>Performed stock take and inventory checks, ensuring accurate rotation and availability.</li>
+                <li>Maintained clean and organised counters while following hygiene standards.</li>
+                <li>Collaborated with team members to manage queues and maintain smooth store operations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="card-title">Production Supervisor / Baker Assistant</p>
+                <p class="card-subtitle">VSE International</p>
+              </div>
+              <div class="card-meta">2022 – 2024</div>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>Supervised production processes to ensure quality and consistency of products.</li>
+                <li>Assisted with mixing, baking, decorating and packaging bakery items.</li>
+                <li>Managed ingredient stock levels and reduced wastage through careful planning.</li>
+                <li>Ensured adherence to hygiene and workplace health & safety standards.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <!-- Education -->
+        <section id="education">
+          <h2 class="section-title">Education</h2>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="card-title">Bachelor of Business Information Systems</p>
+                <p class="card-subtitle">Australian Institute of Higher Education • Sydney</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                Studying core units in information systems, business processes, IT fundamentals and
+                digital tools relevant for IT support and operations.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="card-title">High School Education</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="list-compact">
+                <li>Sainik Awasiya Mahavidyalaya, Bhaktapur, Nepal — GPA 3.60 (+2, 2021)</li>
+                <li>Him Rashmi High School, Kathmandu, Nepal — GPA 3.70 (A+, Grade 10)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+          <h2 class="section-title">Certifications & Licences</h2>
+          <div class="card">
+            <div class="card-body">
+              <ul class="list-compact">
+                <li>Codecademy Front-End Engineer Career Path (HTML, CSS, JavaScript – in progress)</li>
+                <li>Practical skills with HTML, CSS, JavaScript, Python, PHP, Java, MySQL</li>
+                <li>Interest in full-stack development: Django, Laravel, Spring</li>
+                <li>NSW Full Driver Licence</li>
+                <li>RSA Card</li>
+                <li>White Card</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Attributes -->
+        <section>
+          <h2 class="section-title">Professional Attributes</h2>
+          <div class="card">
+            <div class="card-body">
+              <ul class="list-compact">
+                <li>Strong communication and teamwork skills</li>
+                <li>Reliable, punctual and quality-focused</li>
+                <li>Excellent customer service orientation</li>
+                <li>Fast learner, adaptable with technology</li>
+                <li>Bilingual: English and Nepali</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Ashwin Majhi. All rights reserved.</div>
+      <div>Online resume • Ready for IT Support opportunities across Australia</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
